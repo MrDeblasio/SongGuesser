@@ -2,14 +2,26 @@
 Computing project gone wild
 
 <h4>[How to Use](#how-to-use)<br>
-[Exporting](#how-to-export-your-own-songs-for-people-to-play)<br>
-[Importing](#how-to-import-others-songs)<br></h4>
+[Authentication](#authentication)<br>
+[Authentication: Resetting Key](#h3resetting-your-keyh3)<br>
+[Authentication: Changing Key](#h3changing-your-keyh3)<br>
+[Notes](#notes)<br><br>
+[Exporting Song Lists](#how-to-export-your-own-songs-for-people-to-play)<br>
+[Importing Song Lists](#how-to-import-others-songs)<br></h4>
 
 # How to use:
 - (optional) Edit the **"fileName"** variable in **"creator.py"** to your custom file
 - Run **"creator.py"** as many times as you need to add your songs
 - (optional) Edit the **"fileName"** variable in **"main.py"** to your custom file
 - Run **"main.py"** and play the game.
+
+# Authentication
+- If it is the first time entering a key, any key will work, and it will write the key to the file **"secret.txt"**.
+- # <h3>Resetting your key</h3>
+- Open **"secret.txt"** and clear the file
+- # <h3>Changing your key</h3>
+- Open **"secret.txt"** and change the text to what you want the key to be.
+- Making sure the new key is **one line long** and **has minimal special characters** will reduce the risk of an error.
 
 # How to export your own songs for people to play:
 - **REQUIRED**: In **"creator.py"**, change the **"fileName"** variable to something unique, maybe try your name.

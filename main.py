@@ -1,6 +1,7 @@
 import reader
 import json
 import random
+import auth
 import time
 from datetime import datetime
 
@@ -93,6 +94,12 @@ def getSetAndDisplayScores(t1, name):
             print(f'Player: {data["scores"][i]["name"]}, Score: {data["scores"][i]["score"]}; Taken at {dt}; Time Taken: {(round(float(data["scores"][i]["timetaken"]), 2))}')
 
 def main():
+    secret = input("Please input your secret key > ")
+    if (auth.authenticate(secret)):
+        print("Access Granted")
+    else:
+        print("Access Denied")
+        exit(0)
     name = input("Please enter your name > ")
 
     if (fileName == "example.json"):
