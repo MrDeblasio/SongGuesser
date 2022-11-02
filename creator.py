@@ -2,7 +2,7 @@ import reader
 import json
 # Use this script to create content for the app.
 
-fileName = "test.json" # edit this line to change the file, important
+fileName = "example.json" # edit this line to change the file, important
 
 def AddSong(name, artist):
     print(str(reader.appendsong(fileName, name, artist)))

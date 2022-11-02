@@ -4,14 +4,14 @@ import random
 import time
 from datetime import datetime
 
-fn = "test.json"  # IMPORTANT: If you've made a custom setup using 'creator.py', change this file to the filename you use there.
+fileName = "example.json"  # IMPORTANT: If you've made a custom setup using 'creator.py', change this file to the filename you use there.
 rand = random.Random()
 
 score = 0
 maxScore = 10
 minScore = -1
 
-howManyLettersOfName = 2
+howManyLettersOfileNameame = 2
 
 
 def checkScore():
@@ -27,7 +27,7 @@ def checkScore():
 
 
 def makeAnswer():
-    ind = rand.randint(0, reader.getNumResults(fn) - 1)
+    ind = rand.randint(0, reader.getNumResults(fileName) - 1)
     name = str(getSong(ind)["name"])
     artist = str(getSong(ind)["artist"])
     return name, artist
@@ -40,7 +40,7 @@ def doGuess():
     nam = ""
     names = name.split(" ")
     for x in range(len(names)):
-        for i in range(howManyLettersOfName):
+        for i in range(howManyLettersOfileNameame):
             nam += names[x][i]
 
         nam += " "
@@ -94,6 +94,10 @@ def getSetAndDisplayScores(t1, name):
 
 def main():
     name = input("Please enter your name > ")
+
+    if (fileName == "example.json"):
+        print("You are playing with a list with 15 of Virgin Radio Dubai's top 41 songs for 2021.")
+
     t1 = time.time()
     while True:
         doGuess()
@@ -104,7 +108,7 @@ def main():
 
 
 def getSong(index):
-    return reader.read(fn)["songs"][index]
+    return reader.read(fileName)["songs"][index]
 
 
 if (__name__ == "__main__"):
