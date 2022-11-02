@@ -49,5 +49,25 @@ def create(url):
     c(f)
     return f
 
+def setAndReadScores(name, score, date, timetaken):
+    url = "scores.json"
+    f = open(url, "a")
+    if (os.stat(url).st_size == 0):
+        dict1 = {"scores": []}
+        json.dump(dict1, f)
+        c(f)
+    a = {"name": name, "score": score, "date": date, "timetaken": timetaken}
+    f = open(url, "r")
+    data = json.load(f)
+    c(f)
+    data["scores"].append(a)
+    f = open(url, "w")
+    json.dump(data, f)
+    c(f)
+    f = open(url, "r")
+    d = json.load(f)
+    c(f)
+    return d
+
 def c(f):
     f.close

@@ -31,6 +31,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="scores.json" />
     <Content Include="test.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
