@@ -1,13 +1,13 @@
 # SongGuesser
 Computing project gone wild
 
-<h4>[How to Use](#how-to-use)<br>
+[How to Use](#how-to-use)<br>
 [Authentication](#authentication)<br>
-[Authentication: Resetting Key](#h3resetting-your-keyh3)<br>
-[Authentication: Changing Key](#h3changing-your-keyh3)<br>
-[Notes](#notes)<br><br>
+[Authentication: Resetting Key](#resetting-your-key)<br>
+[Authentication: Changing Key](#changing-your-key)<br>
+[Notes](#notes)<br>
 [Exporting Song Lists](#how-to-export-your-own-songs-for-people-to-play)<br>
-[Importing Song Lists](#how-to-import-others-songs)<br></h4>
+[Importing Song Lists](#how-to-import-others-songs)
 
 # How to use:
 - (optional) Edit the **"fileName"** variable in **"creator.py"** to your custom file
@@ -17,9 +17,9 @@ Computing project gone wild
 
 # Authentication
 - If it is the first time entering a key, any key will work, and it will write the key to the file **"secret.txt"**.
-- # <h3>Resetting your key</h3>
+- # Resetting your key
 - Open **"secret.txt"** and clear the file
-- # <h3>Changing your key</h3>
+- # Changing your key
 - Open **"secret.txt"** and change the text to what you want the key to be.
 - Making sure the new key is **one line long** and **has minimal special characters** will reduce the risk of an error.
 
