@@ -15,6 +15,10 @@ Computing project gone wild
 - (optional) Edit the **"fileName"** variable in **"main.py"** to your custom file
 - Run **"main.py"** and play the game.
 
+# Notes
+- You don't have to change the file name in any script **(if you're okay with overriding song lists)**, **however if you change it for one you have to change it for both**.
+- You can also change the **"howManyLettersOfName"** variable in **"main.py"** to change how many letters are revealed for each word.
+
 # Authentication
 - If it is the first time entering a key, any key will work, and it will write the key to the file **"secret.txt"**.
 - # Resetting your key
@@ -36,9 +40,5 @@ If you do not change the **"fileName"** variable, you will overwrite an existing
 - **REQUIRED**: In **"main.py"**, change the **"fileName"** variable to the name of the downloaded file.
 If you do not change the **"fileName"** variable, you will overwrite an existing song list.
 - Launch the script, and you should have the shared file.
-
-# Notes
-- You don't have to change the file name in any script **(if you're okay with overriding song lists)**, **however if you change it for one you have to change it for both**.
-- You can also change the **"howManyLettersOfName"** variable in **"main.py"** to change how many letters are revealed for each word.
 
 Follow instructions or dont complain :D
