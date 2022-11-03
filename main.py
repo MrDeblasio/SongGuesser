@@ -12,7 +12,7 @@ score = 0
 maxScore = 10
 minScore = -1
 
-howManyLettersOfileNameame = 2
+howManyLettersOfFirstWord = 2 # Change this to change how many letters from each word are revealed
 
 
 def checkScore():
@@ -40,16 +40,22 @@ def doGuess():
     name, artist = makeAnswer()
     nam = ""
     names = name.split(" ")
-    for x in range(len(names)):
-        for i in range(howManyLettersOfileNameame):
-            nam += names[x][i]
 
+    for i in names:
+        for x in range(howManyLettersOfFirstWord):
+            if (len(i) < howManyLettersOfFirstWord):
+                nam += i
+                continue
+            nam += f"{i[x]}"
         nam += " "
 
     inp = input(print(f"{nam}by {artist}"))
     inp = inp.lower()
     name = name.lower()
     name = name.replace(" ", "")
+    name = name.replace("'", "")
+    name = name.replace(",", "")
+    name = name.replace(".", "")
     inp = inp.replace("'", "")
     inp = inp.replace(",", "")
     inp = inp.replace(".", "")
@@ -61,9 +67,14 @@ def doGuess():
         inp = input(print("Incorrect, please retry"))
         inp = inp.lower()
         name = name.lower()
-        inp.replace("'", "")
-        inp.replace(",", "")
-        inp.replace(".", "")
+        name = name.replace(" ", "")
+        name = name.replace("'", "")
+        name = name.replace(",", "")
+        name = name.replace(".", "")
+        inp = inp.replace("'", "")
+        inp = inp.replace(",", "")
+        inp = inp.replace(".", "")
+        inp = inp.replace(" ", "")
         if (str(inp) == name):
             score += 1
             print("Good Job!")
